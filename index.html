@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Best of America™ Shop</title>
+<meta name="description" content="Made-to-order caps and vests from The Best of America™ National Archive, est. 2003. Embroidered in California. Every purchase helps preserve a hero's story.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0f1f3d;
+    --navy-2: #172b52;
+    --gold: #c9a24a;
+    --gold-soft: #e7d3a0;
+    --cream: #faf7f0;
+    --ink: #1c2333;
+    --muted: #5b6475;
+    --line: #e4ddcc;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Source Sans 3", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--cream);
+  }
+  h1, h2, h3 { font-family: "Libre Baskerville", Georgia, serif; line-height: 1.25; margin: 0 0 .5em; }
+  a { color: inherit; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+  /* Header */
+  header {
+    background: var(--navy);
+    color: #fff;
+    border-bottom: 3px solid var(--gold);
+  }
+  header .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; padding-top: 14px; padding-bottom: 14px; flex-wrap: wrap;
+  }
+  .brand { font-family: "Libre Baskerville", Georgia, serif; font-weight: 700; font-size: 18px; text-decoration: none; }
+  .brand span { color: var(--gold); }
+  nav a { text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 16px; color: var(--gold-soft); }
+  nav a:hover { color: #fff; }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color: #fff;
+    text-align: center;
+    padding: 72px 0 80px;
+  }
+  .eyebrow {
+    display: inline-block; color: var(--gold); letter-spacing: .18em;
+    text-transform: uppercase; font-size: 14px; font-weight: 700; margin-bottom: 16px;
+  }
+  .hero h1 { font-size: clamp(30px, 5vw, 48px); max-width: 760px; margin: 0 auto 18px; }
+  .hero p { max-width: 640px; margin: 0 auto 30px; color: #d6dbe6; }
+  .stars { color: var(--gold); letter-spacing: .4em; font-size: 20px; margin-bottom: 18px; }
+  .btn {
+    display: inline-block; background: var(--gold); color: var(--navy);
+    font-weight: 700; text-decoration: none; padding: 14px 28px; border-radius: 4px;
+    border: 2px solid var(--gold);
+  }
+  .btn:hover { background: var(--gold-soft); border-color: var(--gold-soft); }
+  .btn.outline { background: transparent; color: var(--gold); }
+  .btn.outline:hover { background: var(--gold); color: var(--navy); }
+
+  /* Products */
+  section { padding: 72px 0; }
+  .section-title { text-align: center; margin-bottom: 40px; }
+  .section-title h2 { font-size: 32px; color: var(--navy); }
+  .section-title p { color: var(--muted); margin: 0; }
+  .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
+  .card {
+    background: #fff; border: 1px solid var(--line); border-radius: 6px; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .photo {
+    position: relative; aspect-ratio: 4 / 3; background: var(--navy);
+    display: flex; align-items: center; justify-content: center; color: var(--gold-soft);
+    font-size: 15px; text-align: center;
+  }
+  .photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .card-body { padding: 26px; display: flex; flex-direction: column; flex: 1; }
+  .card h3 { font-size: 22px; color: var(--navy); }
+  .price { font-size: 22px; font-weight: 700; color: var(--gold); margin-bottom: 12px; }
+  .card ul { padding-left: 20px; margin: 0 0 18px; color: var(--muted); font-size: 16px; }
+  .card li { margin-bottom: 6px; }
+  .note { font-size: 15px; color: var(--muted); margin-bottom: 22px; }
+  .card .btn { margin-top: auto; text-align: center; }
+
+  /* About */
+  .about { background: var(--navy); color: #e6e9f0; }
+  .about h2 { color: #fff; font-size: 30px; }
+  .about h3 { color: var(--gold); font-size: 22px; margin-top: 36px; }
+  .about .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px; }
+  .checks { list-style: none; padding: 0; margin: 0; }
+  .checks li { padding-left: 30px; position: relative; margin-bottom: 12px; }
+  .checks li::before { content: "★"; color: var(--gold); position: absolute; left: 0; }
+  blockquote {
+    margin: 32px 0 0; padding: 20px 24px; border-left: 3px solid var(--gold);
+    background: rgba(255,255,255,.05); font-family: "Libre Baskerville", Georgia, serif; font-style: italic;
+  }
+  blockquote cite { display: block; margin-top: 10px; font-family: "Source Sans 3", Arial, sans-serif; font-style: normal; font-size: 15px; color: var(--gold-soft); }
+
+  /* FAQ */
+  .faq { max-width: 760px; margin: 0 auto; }
+  details { border-bottom: 1px solid var(--line); padding: 18px 0; }
+  summary { font-weight: 700; color: var(--navy); cursor: pointer; font-size: 19px; }
+  details p { margin: 12px 0 0; color: var(--muted); }
+
+  /* Footer */
+  footer { background: var(--navy); color: #aab3c5; font-size: 14px; padding: 40px 0; text-align: center; border-top: 3px solid var(--gold); }
+  footer .motto { font-family: "Libre Baskerville", Georgia, serif; font-style: italic; color: var(--gold); font-size: 18px; margin-bottom: 16px; }
+  footer p { max-width: 760px; margin: 0 auto 10px; }
+
+  @media (max-width: 600px) {
+    nav a { margin-left: 0; margin-right: 16px; }
+    section { padding: 52px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="https://thebestofamerica.org">The Best of America<span>™</span> Shop</a>
+    <nav>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://thebestofamerica.org">Archive</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="stars">★★★★★</div>
+    <div class="eyebrow">National Archive · Est. 2003</div>
+    <h1>Wear the seal of a permanent American archive.</h1>
+    <p>Made-to-order caps and vests, embroidered in metallic gold on navy in the Antelope Valley, California. Every purchase helps preserve a hero's story.</p>
+    <a class="btn" href="#shop">Shop the Collection</a>
+  </div>
+</div>
+
+<section id="shop">
+  <div class="wrap">
+    <div class="section-title">
+      <h2>The Collection</h2>
+      <p>Embroidered locally after you order. No inventory, no waste.</p>
+    </div>
+
+    <div class="products">
+      <!-- CAP -->
+      <div class="card">
+        <div class="photo">
+          Cap photo coming soon
+          <!-- Upload a photo named cap.jpg to the repo and it will appear here -->
+          <img src="cap.jpg" alt="Archive Seal Cap in navy with gold embroidered seal" onerror="this.remove()">
+        </div>
+        <div class="card-body">
+          <h3>Archive Seal Cap — Navy &amp; Gold</h3>
+          <div class="price">$[__]</div>
+          <ul>
+            <li>Front: Archive seal (eagle, shield, five stars, laurels) in metallic gold thread</li>
+            <li>Back: Embroidered American flag and TheBestofAmerica.org</li>
+            <li>One size, adjustable</li>
+          </ul>
+          <p class="note">Made to order. Ships from Lancaster, CA in [X–X] business days.</p>
+          <!-- Replace with your real Big Cartel cap link -->
+          <a class="btn" href="https://thebestofamerica.bigcartel.com/product/archive-seal-cap">Order the Cap</a>
+        </div>
+      </div>
+
+      <!-- VEST -->
+      <div class="card">
+        <div class="photo">
+          Vest photo coming soon
+          <!-- Upload a photo named vest.jpg to the repo and it will appear here -->
+          <img src="vest.jpg" alt="Archive Seal Vest in navy with gold embroidered seal" onerror="this.remove()">
+        </div>
+        <div class="card-body">
+          <h3>Archive Seal Vest — Navy &amp; Gold</h3>
+          <div class="price">$[__]</div>
+          <ul>
+            <li>Left chest: Archive seal in metallic gold thread</li>
+            <li>[VEST TYPE, e.g. soft-shell / fleece / quilted], navy</li>
+            <li>Sizes S – 3XL</li>
+          </ul>
+          <p class="note">Made to order. Ships from Lancaster, CA in [X–X] business days.</p>
+          <!-- Replace with your real Big Cartel vest link -->
+          <a class="btn" href="https://thebestofamerica.bigcartel.com/product/archive-seal-vest">Order the Vest</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="eyebrow">Independent · Not affiliated with any government entity</div>
+        <h2>A Permanent National Archive</h2>
+        <p>The Best of America™ National Archive is an independent, permanent archive. We're not a government agency or a museum gift shop. We preserve the lives of veterans, first responders, Gold Star families, pioneers and builders whose lives are the best of America. Each record is verified, sourced and kept for good.</p>
+        <p>Nominations and individual recognitions are always free at <a href="https://thebestofamerica.org">TheBestofAmerica.org</a>.</p>
+
+        <h3>From America's Aerospace Valley</h3>
+        <p>We're based in Lancaster, California, in the Antelope Valley. The B-2 stealth bomber was assembled at Air Force Plant 42 in Palmdale, and the B-21 Raider is being built there now. Just up the road is Edwards Air Force Base, where Chuck Yeager broke the sound barrier in 1947 and the Space Shuttle landed.</p>
+        <p>The base carries the name of Capt. Glen W. Edwards, the young test pilot who gave his life in 1948. He is preserved in The Best of America™ archive. When you wear the seal, you wear that lineage.</p>
+      </div>
+
+      <div>
+        <h3 style="margin-top:0">Why We Make Apparel</h3>
+        <p>Our seal is The Best of America National Archive emblem: eagle, shield, five stars and laurels, embroidered in gold on navy. It signals service, not fashion.</p>
+        <ul class="checks">
+          <li>Embroidered locally in the Antelope Valley, California</li>
+          <li>Made to order with no inventory and no waste</li>
+          <li>Ships from Lancaster, CA 93535</li>
+          <li>Every purchase helps preserve another hero's story</li>
+        </ul>
+        <blockquote>
+          "Most places I go, people treat me with added respect and politeness."
+          <cite>— William Salisbury, Founder, wearing The Best of America™ cap in Lancaster, CA</cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="section-title"><h2>Questions</h2></div>
+    <div class="faq">
+      <details>
+        <summary>How long until it ships?</summary>
+        <p>Every item is made to order. Embroidery takes [X–X] business days, then it ships USPS from Lancaster, CA. You'll get a tracking email.</p>
+      </details>
+      <details>
+        <summary>Can I return it?</summary>
+        <p>Made-to-order items can't be returned for change of mind. If there's a defect or we made an error, email us within 30 days and we'll make it right.</p>
+      </details>
+      <details>
+        <summary>Where is it made?</summary>
+        <p>[Blank origin, e.g. "Made in USA blanks from (brand)"]. Embroidered locally in the Antelope Valley, California.</p>
+      </details>
+      <details>
+        <summary>How do I reach you?</summary>
+        <p>Email [EMAIL].</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="motto">Heroes Remembered, Freedom for Life™</div>
+    <p>The Best of America™, Heroes Remembered, Freedom for Life™ and TheBestofAmerica.org™ are trademarks of The Best of America™ National Archive, Est. 2003.</p>
+    <p>Aircraft, places and organizations are named for historical context only. The Best of America™ National Archive is not affiliated with or endorsed by any company, military branch or government agency named on this site.</p>
+    <p>© The Best of America™ National Archive · Lancaster, California</p>
+  </div>
+</footer>
+
+</body>
+</html>
